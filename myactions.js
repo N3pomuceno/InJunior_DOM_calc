@@ -1,7 +1,15 @@
 function adicao(){
     let dado = document.querySelector("input")
-    contagem++;
-    soma += parseFloat(dado.value);
+    if (dado.value == ""){
+        alert("Por favor, insira uma nota.");
+    } else if(isNaN(dado.value)){
+        alert("A nota digitada é inválida, por favor, insira uma nota válida.");
+    }else if (dado.value < 0 || dado.value > 10) {
+        alert("A nota digitada é inválida, por favor, insira uma nota válida.");
+    } else {
+        contagem++;
+        soma += parseFloat(dado.value);
+    }
     // Falta adicionar o dado na parte central que mostra os valores adicionados
 }
 
