@@ -7,13 +7,18 @@ function adicao(){
     }else if (dado.value < 0 || dado.value > 10) {
         alert("A nota digitada é inválida, por favor, insira uma nota válida.");
     } else {
+        //Fazendo o cálculo por trás
         contagem++;
         soma += parseFloat(dado.value);
 
+        // Colocando na box de notas
         var p = document.createElement('p');
-        p.textContent = "A nota "+contagem+" é "+dado.value+".";
+        p.textContent = "A nota "+contagem+" é "+parseFloat(dado.value).toFixed(2)+".";
         var place = document.getElementsByClassName("container");
         place[0].appendChild(p);
+
+        //Limpando texto de notas 
+        dado.value = ""
     }
 }
 
