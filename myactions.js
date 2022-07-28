@@ -9,13 +9,17 @@ function adicao(){
     } else {
         contagem++;
         soma += parseFloat(dado.value);
-        document.getElementsById("historico_de_notas").innerHTML = mensagem(contagem, dado.value)
+        document.getElementById("historico_de_notas").innerHTML = mensagem(contagem, dado.value)
     }
     // Falta adicionar o dado na parte central que mostra os valores adicionados
 }
 
 function mensagem(cont, valor){
     return "A nota "+cont+" é "+valor
+}
+
+function resultado(med){
+    return "A média aritmética das notas é "+Math.round(med * 100)/100
 }
 
 
@@ -26,8 +30,10 @@ function calculoMedia() {
     } else {
         med = soma/contagem
     }
+    document.getElementById("resultado").innerHTML = resultado(med)
+    
     // usar innerHTML para colocar na pagina o resultado
-    console.log(contagem, soma, med)
+    //console.log(contagem, soma, med)
 }
 
 
