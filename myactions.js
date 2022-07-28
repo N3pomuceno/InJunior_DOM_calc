@@ -9,9 +9,15 @@ function adicao(){
     } else {
         contagem++;
         soma += parseFloat(dado.value);
+        document.getElementsById("historico_de_notas").innerHTML = mensagem(contagem, dado.value)
     }
     // Falta adicionar o dado na parte central que mostra os valores adicionados
 }
+
+function mensagem(cont, valor){
+    return "A nota "+cont+" é "+valor
+}
+
 
 function calculoMedia() {
     let med
