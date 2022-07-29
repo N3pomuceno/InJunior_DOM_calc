@@ -1,5 +1,5 @@
 function adicao(){
-    let dado = document.querySelector("input")
+    let dado = document.querySelector("#input")
     if (dado.value == ""){
         alert("Por favor, insira uma nota.");
     } else if(isNaN(dado.value)){
